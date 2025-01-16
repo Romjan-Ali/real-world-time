@@ -21,11 +21,11 @@ app.listen(port, () => {
 })
 
 
-export default function handler(req, res) {
+/* export default function handler(req, res) {
     try {
         res.status(200).json({ message: "Backend is running!" });
     } catch (error) {
         console.error("Error occurred:", error);
         res.status(500).json({ error: "Internal Server Error" });
     }
-}
+} */
