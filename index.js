@@ -18,5 +18,14 @@ app.get('/', (req, res) => {
 
 app.listen(port, () => {
     console.log(`backend server is running on port ${port}`)
-    return `backend server is running on port ${port}`
 })
+
+
+export default function handler(req, res) {
+    try {
+        res.status(200).json({ message: "Backend is running!" });
+    } catch (error) {
+        console.error("Error occurred:", error);
+        res.status(500).json({ error: "Internal Server Error" });
+    }
+}
