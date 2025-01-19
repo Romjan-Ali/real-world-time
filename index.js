@@ -9,7 +9,7 @@ const port = 8080
 
 app.get('/current-time', (req, res) => {
     const currentDateTime = new Date().toISOString()
-    return res.json(currentDateTime)
+    return res.json({ currentDateTime })
 })
 
 app.get('/', (req, res) => {
